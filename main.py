@@ -2,6 +2,7 @@ import subprocess
 import sys
 import streamlit as st
 
+
 @st.cache_resource
 def start_external_app():
     # Launches an external app (e.g., a background service or another script)
@@ -10,11 +11,12 @@ def start_external_app():
         [sys.executable, "-m", "uvicorn", "app_fastapi_v2:app", "--reload"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        text=True
+        text=True,
     )
     return process
 
-if __name__ =="__main__":
+
+if __name__ == "__main__":
     external_process = start_external_app()
     tab1, tab2 = st.tabs(["docs", "redoc"])
 
