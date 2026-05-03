@@ -8,7 +8,7 @@ def start_external_app():
     # Launches an external app (e.g., a background service or another script)
     # Using Popen allows it to run in the background without blocking Streamlit
     process = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "app_fastapi_v2:app", "--reload"],
+        [sys.executable, "-m", "uvicorn", "fastapi_app:app", "--reload"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,

@@ -8,6 +8,11 @@ FastAPI swagger can be [customized](https://fastapi.tiangolo.com/how-to/configur
 app = FastAPI(swagger_ui_parameters={"syntaxHighlight": False})
 ```
 
+## How to
+```console
+uv run streamlit run main.py
+```
+
 This `streamlit` skin is to avoid the flashbang every time I use the `docs` page to check the endpoints 
 
 # How it works
